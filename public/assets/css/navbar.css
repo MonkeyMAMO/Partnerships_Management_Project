@@ -1,14 +1,42 @@
-.navbar-logo {
-    width: auto; /* Adjust the width as needed */
-    height: 2em; /* Set the height to match the font size of navbar-brand */
-    margin-right: 10px; /* Adjust the spacing as needed */
-    margin-bottom: -30px;
+.navbar {
+    display: flex;
+    align-items: center;
 }
+
+.navbar-logo {
+    width: auto;
+    height: 2em;
+}
+
 .navbar-brand {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .text-center {
     text-align: center;
 }
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav {
+    margin-right: 700px;
+
+}
+
+.navbar-brand .d-block:first-child {
+    left: 0;
+}
+
+.navbar-brand .d-block:last-child {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
