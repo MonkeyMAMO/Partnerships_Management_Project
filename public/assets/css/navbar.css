@@ -1,0 +1,14 @@
+.navbar-logo {
+    width: auto; /* Adjust the width as needed */
+    height: 2em; /* Set the height to match the font size of navbar-brand */
+    margin-right: 10px; /* Adjust the spacing as needed */
+    margin-bottom: -30px;
+}
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}

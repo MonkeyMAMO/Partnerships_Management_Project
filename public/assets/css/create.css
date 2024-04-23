@@ -1,0 +1,15 @@
+form {
+    margin-top: 40px;
+}
+
+/* Apply red border to input and select elements when they are empty */
+input:invalid,
+select:invalid {
+    border: 2px solid;
+}
+
+/* Remove default browser styling for invalid input and select elements */
+input:invalid:focus,
+select:invalid:focus {
+    outline: none;
+}

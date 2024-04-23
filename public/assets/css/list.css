@@ -1,0 +1,19 @@
+/* Style for the buttons */
+.btn {
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor */
+}
+
+/* Style for the icons */
+.btn i {
+    font-size: 19px; /* Adjust size as needed */
+    color: #555; /* Adjust color as needed */
+}
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.btn-group .btn {
+    margin-right: 5px; /* Adjust margin as needed */
+}
