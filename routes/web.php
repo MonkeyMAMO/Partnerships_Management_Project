@@ -14,6 +14,9 @@ use App\Http\Controllers\ParController;
 |
 */
 
+Route::get("/", function () {
+    return redirect("/par");
+})->name("home");
 
 // Route for displaying the list/table
 Route::get('/par', [ParController::class, 'index'])->name('par.index');

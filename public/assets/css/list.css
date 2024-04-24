@@ -50,7 +50,8 @@ button {
 
 /* Style for table headers */
 .table thead th {
-    color: black;
+    color: white;
+    background-color: black;
     font-weight: bold;
 }
 
@@ -58,3 +59,11 @@ button {
     background-color: #2323aa;
     color: white;
 }
+
+h2.mb-0 {
+    text-align: center;
+    margin: 0 auto; /* Optional: To center horizontally */
+    font-weight: bold;
+}
+
+

@@ -9,11 +9,23 @@ use App\Models\ParModel;
 class ParController extends Controller
 {
     // Method for displaying a list of records
-    public function index()
+    public function index(Request $request)
     {
-        $records = ParModel::all();
+        // Check if 'recherche' input is provided and not empty
+        if ($request->has('recherche') && !empty($request->recherche)) {
+            // Use the 'recherche' input value to filter records
+            $searchTerm = $request->recherche . '%';
+
+            // Use the concatenated value to filter records
+            $records = ParModel::where('date', 'like', $searchTerm)->get();
+        } else {
+            // If 'recherche' input is not provided or empty, fetch all records
+            $records = ParModel::all();
+        }
+
         return view('components.list', ['records' => $records]);
     }
+
 
     // Method for displaying a form to create a new record
     public function create()
@@ -31,8 +43,9 @@ class ParController extends Controller
             'date' => 'required|date',
             'status' => 'required|string',
             'amount' => 'nullable|numeric',
-            'extension' => 'nullable|integer',
+            'extension' => 'nullable|numeric|max:100', // Adjust the maximum value as needed
         ]);
+
         // Find the last record in the table
         $lastRecord = ParModel::latest()->first();
 

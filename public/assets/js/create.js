@@ -46,6 +46,24 @@ document.addEventListener('DOMContentLoaded', function () {
         extension.value = extension.value.replace(/[^\d]/g, '');
     });
 });
+// Get a reference to the extension input field
+var extensionInput = document.getElementById('extension');
+
+// Add an event listener for input events on the extension input field
+extensionInput.addEventListener('input', function () {
+    // Get the value of the input field
+    var extensionValue = extensionInput.value;
+
+    // Check if the length of the value is greater than the maximum allowed length
+    if (extensionValue.length > 3) { // Adjust the maximum length as needed
+        // If the length is too long, display an error message or prevent form submission
+        // For example, you can show an error message to the user
+        alert('الرقم طويل جداً. يرجى إدخال قيمة أقصر.');
+        // You can also prevent form submission by returning false or calling event.preventDefault()
+        // return false;
+    }
+});
+
 
 
 // this part is for the amount :
